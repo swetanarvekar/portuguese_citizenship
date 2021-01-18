@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- SITE TITLE -->
-<title>Add Client</title>
+<title>Document</title>
 <!-- Favicon Icon -->
 <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
 <!-- Animation CSS -->
@@ -70,7 +70,7 @@
 <header class="header_wrap dark_skin hover_menu_style3 box_shadow3">
   <div class="container">
     <nav class="navbar navbar-expand-lg"> 
-    	<a class="navbar-brand" href="index.html">
+    	<a class="navbar-brand" href="dashboard.html">
             <h2 style="
             font-weight: 600;
             text-transform: uppercase;
@@ -82,22 +82,26 @@
             <ul class="navbar-nav">
                
                 <li>
-                    <a class="nav-link page-scroll active" href="dashboard.html" style="color:#000;">Home</a>
-                </li>
-                <li>
-                    <a class="nav-link page-scroll active" href="add_client.html" style="color:#000;">Add Client</a>
+                    <a class="nav-link page-scroll active" href="dashboard.html" style="color:#000;">Dashboard</a>
                 </li>
                 <li>
                     <a class="nav-link page-scroll active" href="document.html" style="color:#000;">Document</a>
                 </li>
+                <li>
+                    <a class="nav-link page-scroll active" href="custom_report.html" style="color:#000;">Custom Report</a>
+                </li>
                 <ul class="navbar-nav attr-nav align-items-center">
-                    <li><a href="index.html" class="nav-link search_trigger"><i class="ion-android-person"></i></a>
+                    <li><a href="add_client.html" class="nav-link"><button class=" btn-default btn-xs box_shadow3" type="button" style="font-weight:600;text-transform: uppercase;border-radius:5px;"><i class="ion-android-add-circle"></i> Add Client</button></a></li>
+                    <li><a href="reminder_followup.html" class="nav-link"><i class="ion-ios-bell"></i><span class="cart_count" style="background-color:red;">2</span></a></li>
+                    <li><a href="index.html" class="nav-link"><i class="ion-android-person"></i></a>
                        
                     </li>
+                    <li><a href="#" class="nav-link search_trigger"  data-toggle="modal" data-target="#exampleModalLong"><i class="ion-ios-search-strong" style="font-size:25px;"></i></a></li>
                     <li><a href="index.html" class="nav-link search_trigger"><i class="ion-log-out" style="color: #000;font-size: 24px;"></i></a>
                        
                     </li>
                 </ul>
+                
                 
             </ul>
     </nav>
@@ -123,8 +127,8 @@
                                 <label  style="font-weight: 700;">Registration : <span class="asterisk-color">*</span></label>
                                 <div class="custom_select">
                                     <select class="form-control not_chosen">
-                                    	<option value="">Register</option>
-                                    	<option value="1">Instagram</option>
+                                    	<option value=""> --- Select --- </option>
+                                    	<option value="1">Nationality Through Marriage</option>
                                     	<option value="2">Phone</option>
                                     </select>
                                 </div>
@@ -133,9 +137,14 @@
                                 <label  style="font-weight: 700;">To Register : <span class="asterisk-color">*</span></label>
                                 <div class="custom_select">
                                     <select class="form-control not_chosen">
-                                    	<option value="">To Register</option>
-                                    	<option value="1">Instagram</option>
-                                    	<option value="2">Phone</option>
+                                    	<option value=""> --- Select --- </option>
+                                    	<option value="1">Self</option>
+                                        <option value="2">Wife</option>
+                                        <option value="3">Husband</option>
+                                        <option value="4">Daughter</option>
+                                        <option value="5">Son</option>
+                                        <option value="6">Father</option>
+                                        <option value="7">Mother</option>
                                     </select>
                                 </div>
                             </div>
@@ -143,9 +152,12 @@
                                 <label  style="font-weight: 700;">Document : <span class="asterisk-color">*</span></label>
                                 <div class="custom_select">
                                     <select class="form-control not_chosen">
-                                    	<option value="1">Document</option>
-                                    	<option value="2">Instagram</option>
-                                    	<option value="3">Phone</option>
+                                    	<option value=""> --- Select --- </option>
+                                    	<option value="1">Birth Certificate</option>
+                                        <option value="2">Valid Passport</option>
+                                        <option value="3">Police Clearance</option>
+                                        <option value="4">Police Clearance2</option>
+                                        <option value="5">Marriage Certificate</option>
                                     </select>
                                 </div>
                             </div>
@@ -153,9 +165,21 @@
                                 <label  style="font-weight: 700;">Document Of : <span class="asterisk-color">*</span></label>
                                 <div class="custom_select">
                                     <select class="form-control not_chosen">
-                                    	<option value="">Document</option>
-                                    	<option value="1">Instagram</option>
-                                    	<option value="2">Phone</option>
+                                    	<option value=""> --- Select --- </option>
+                                    	<option value="1">Wife</option>
+                                        <option value="2">Husband</option>
+                                        <option value="3">Son</option>
+                                        <option value="4">Daughter</option>
+                                        <option value="5">Mother</option>
+                                        <option value="6">Father</option>
+                                        <option value="7">Grand Mother</option>
+                                        <option value="8">Grand Father</option>
+                                        <option value="9">Mother in Law</option>
+                                        <option value="10">Father in Law</option>
+                                        <option value="11">Brother in Law</option>
+                                        <option value="12">Sister in law</option>
+                                        <option value="13">Sister</option>
+                                        <option value="14">Brother</option>
                                     </select>
                                 </div>
                             </div>
@@ -170,20 +194,19 @@
                             <div class="form-group col-lg-3 col-md-6">
                                 <label  style="font-weight: 700;"> Date: <span class="asterisk-color">*</span></label>
                                 
-                                <input required="required" placeholder="DD/MM/YYYY" class="form-control datepicker" name="date" type="text">
+                                <input required="required" placeholder=" Date" class="form-control datepicker" name="date" type="text">
                             </div>
                             <div class="form-group col-lg-3 col-md-6">
                                 <label  style="font-weight: 700;">Reg Date: <span class="asterisk-color">*</span></label>
-                                
-                                <input required="required" placeholder="DD/MM/YYYY" class="form-control datepicker" name="date" type="text">
+                                <input required="required" placeholder="Reg Date" class="form-control datepicker" name="date" type="text">
                             </div>
                             <div class="form-group col-lg-3 col-md-6">
-                            	<label  style="font-weight: 700;">Doc Available : <span class="asterisk-color">*</span></label>
+                            	<label  style="font-weight: 700;">Doc Required : <span class="asterisk-color">*</span></label>
                                 <div class="custom_select">
                                     <select class="form-control not_chosen">
-                                    	<option value="">Document</option>
-                                    	<option value="1">Instagram</option>
-                                    	<option value="2">Phone</option>
+                                    	<option value=""> --- Select --- </option>
+                                    	<option value="1">Original</option>
+                                    	<option value="2">Scan</option>
                                     </select>
                                 </div>
                             </div>
@@ -191,60 +214,60 @@
                             	<label  style="font-weight: 700;">Doc in Office : <span class="asterisk-color">*</span></label>
                                 <div class="custom_select">
                                     <select class="form-control not_chosen">
-                                    	<option value="">Document</option>
-                                    	<option value="1">Instagram</option>
-                                    	<option value="2">Phone</option>
+                                    	<option value=""> --- Select --- </option>
+                                    	<option value="1">Original</option>
+                                        <option value="2">PhotoCopy</option>
+                                        <option value="3">Scan</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group col-lg-3 col-md-6">
                                 <label  style="font-weight: 700;">SAC Date: <span class="asterisk-color">*</span></label>
-                                
-                                <input required="required" placeholder="DD/MM/YYYY" class="form-control datepicker" name="date" type="text">
+                                <input required="required" placeholder="SAC Date" class="form-control datepicker" name="date" type="text">
                             </div>
                        
                         <div class="form-group col-lg-3 col-md-6">
-                            <label  style="font-weight: 700;">Attested : <span class="asterisk-color">*</span></label>
+                            <label  style="font-weight: 700;">Billable : <span class="asterisk-color">*</span></label>
                             <div class="custom_select">
                                 <select class="form-control not_chosen">
-                                    <option value="">Document</option>
-                                    <option value="1">Instagram</option>
-                                    <option value="2">Phone</option>
+                                    <option value=""> --- Select --- </option>
+                                    <option value="1">Yes</option>
+                                    <option value="2">No</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group col-lg-3 col-md-6">
                             <label  style="font-weight: 700;">Translation Date: <span class="asterisk-color">*</span></label>
                 
-                            <input required="required" placeholder="DD/MM/YYYY" class="form-control datepicker" name="date" type="text">
+                            <input required="required" placeholder="Translation Date" class="form-control datepicker" name="date" type="text">
                         </div>
                         <div class="form-group col-lg-3 col-md-6">
                             <label  style="font-weight: 700;">Notary Date: <span class="asterisk-color">*</span></label>
                             
-                            <input required="required" placeholder="DD/MM/YYYY" class="form-control datepicker" name="date" type="text">
+                            <input required="required" placeholder="Notary Date" class="form-control datepicker" name="date" type="text">
                         </div>
                         <div class="form-group col-lg-3 col-md-6">
                             <label  style="font-weight: 700;">Collector Date: <span class="asterisk-color">*</span></label>
                            
-                            <input required="required" placeholder="DD/MM/YYYY" class="form-control datepicker" name="date" type="text">
+                            <input required="required" placeholder="Collector Date" class="form-control datepicker" name="date" type="text">
                         </div>
                         <div class="form-group col-lg-3 col-md-6">
                             <label  style="font-weight: 700;">Apo Date: <span class="asterisk-color">*</span></label>
                             
-                            <input required="required" placeholder="DD/MM/YYYY" class="form-control datepicker" name="date" type="text">
+                            <input required="required" placeholder="Apo Date" class="form-control datepicker" name="date" type="text">
                         </div>
                         <div class="form-group col-lg-3 col-md-6">
                             <label  style="font-weight: 700;">Sent To PT Date Date: <span class="asterisk-color">*</span></label>
     
-                            <input required="required" placeholder="DD/MM/YYYY" class="form-control datepicker" name="date" type="text">
+                            <input required="required" placeholder="Sent To PT Date Date" class="form-control datepicker" name="date" type="text">
                         </div>
                         <div class="form-group col-lg-3 col-md-6">
-                            <label  style="font-weight: 700;">Doc reached : <span class="asterisk-color">*</span></label>
+                            <label  style="font-weight: 700;">Doc reached Portugal: <span class="asterisk-color">*</span></label>
                             <div class="custom_select">
                                 <select class="form-control not_chosen">
-                                    <option value="">Document</option>
-                                    <option value="1">Instagram</option>
-                                    <option value="2">Phone</option>
+                                    <option value=""> --- Select --- </option>
+                                    <option value="1">Yes</option>
+                                    <option value="2">No</option>
                                 </select>
                             </div>
                         </div>
@@ -254,25 +277,46 @@
                         </div>
                         <div class="form-group col-lg-3 col-md-6">
                             <label  style="font-weight: 700;">Submitted Date: <span class="asterisk-color">*</span></label>
-                            <input required="required" placeholder="DD/MM/YYYY" class="form-control datepicker" name="date" type="text">
+                            <input required="required" placeholder="Submitted Date" class="form-control datepicker" name="date" type="text">
                         </div>
                         <div class="form-group col-lg-3 col-md-6">
                             <label  style="font-weight: 700;">Concluded Date: <span class="asterisk-color">*</span></label>
-                            <input required="required" placeholder="DD/MM/YYYY" class="form-control datepicker" name="date" type="text">
+                            <input required="required" placeholder="Concluded Date" class="form-control datepicker" name="date" type="text">
                         </div>
                         <div class="form-group col-lg-3 col-md-6">
-                            <label  style="font-weight: 700;">Submitted : <span class="asterisk-color">*</span></label>
+                            <label  style="font-weight: 700;">Doc Issue  Date: <span class="asterisk-color">*</span></label>
+                            <input required="required" placeholder="Doc Issue  Date" class="form-control datepicker" name="date" type="text">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-6">
+                            <label  style="font-weight: 700;">Reg Bill : <span class="asterisk-color">*</span></label>
                             <div class="custom_select">
                                 <select class="form-control not_chosen">
-                                    <option value="">Document</option>
+                                    <option value=""> --- Select ---</option>
                                     <option value="1">Instagram</option>
                                     <option value="2">Phone</option>
                                 </select>
                             </div>
                         </div>
+                        <div class="form-group col-lg-3 col-md-6">
+                            <label  style="font-weight: 700;">Submitted : <span class="asterisk-color">*</span></label>
+                            <div class="custom_select">
+                                <select class="form-control not_chosen">
+                                    <option value=""> --- Select --- </option>
+                                    <option value="1">Yes</option>
+                                    <option value="2">No</option>
+                                </select>
+                            </div>
+                        </div>
                        
                         <div class="form-group col-md-3">
-                            <label  style="font-weight: 700;">Attachment: <span class="asterisk-color">*</span></label>
+                            <label  style="font-weight: 700;">Attachment1: <span class="asterisk-color">*</span></label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                              </div>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label  style="font-weight: 700;">Attachment2: <span class="asterisk-color">*</span></label>
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
                                 <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
@@ -293,9 +337,7 @@
                         </div>
                     </form>		
                     </div>
-                <div class="map">
-                	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193229.77301255226!2d-74.05531241936525!3d40.823236500441624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f613438663b5%3A0xce20073c8862af08!2sW+123rd+St%2C+New+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1533565007513" frameborder="0" allowfullscreen=""></iframe>
-                </div>
+               
             </div>
         </div>
     </div>
@@ -305,7 +347,7 @@
         <div class="row align-items-center">
             <div class="col-lg-12 col-md-12 col-sm-12 animation animated fadeInUp" data-animation="fadeInUp" data-animation-delay="0.1s" style="animation-delay: 0.1s; opacity: 1;">
                 <div class="heading_s1 text-center"> 
-                  <h2>Client Details</h2>
+                  <h2>Document Details</h2>
                 </div>
                
                 <div class="row">
